@@ -6,11 +6,32 @@
         android:icon="@drawable/ic_search"
         android:orderInCategory="100"
         android:title="Search"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
         android:title="Settings"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/filterByDate"
+        android:title="filter by Date"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/filterByPrice"
+        android:title="filter by Price"
+        android:orderInCategory="400"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/filterByStatus"
+        android:title="filter by Status"
+        android:orderInCategory="500"
+        app:showAsAction="never"
+        />
+
 </menu>

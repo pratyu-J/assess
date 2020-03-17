@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.neuman.deveval"
+        applicationId "com.neuman.PratyushAssignment"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 240
@@ -59,4 +59,5 @@ dependencies {
     implementation 'com.hootsuite.android:nachos:1.1.1'
     implementation 'pub.devrel:easypermissions:0.2.1'
     implementation 'id.zelory:compressor:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

@@ -1,10 +1,9 @@
-package com.neuman.brutus.utils;
+package com.neuman.PratyushAssignment.utils;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.neuman.brutus.R;
-import com.neuman.brutus.utils.Globals;
+import com.neuman.PratyushAssignment.R;
 
 public class FragmentHandler {
 

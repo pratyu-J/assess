@@ -1,4 +1,4 @@
-package com.neuman.brutus;
+package com.neuman.PratyushAssignment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.neuman.brutus.utils.FragmentHandler;
-import com.neuman.brutus.utils.Globals;
+import com.neuman.PratyushAssignment.utils.FragmentHandler;
+import com.neuman.PratyushAssignment.utils.Globals;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 

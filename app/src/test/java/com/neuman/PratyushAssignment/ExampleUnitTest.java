@@ -1,4 +1,4 @@
-package com.neuman.brutus;
+package com.neuman.PratyushAssignment;
 
 import org.junit.Test;
 
