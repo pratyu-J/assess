@@ -1,9 +1,9 @@
-package com.neuman.PratyushAssignment.utils;
+package com.pj.PratyushAssignment.utils;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.neuman.PratyushAssignment.R;
+import com.pj.PratyushAssignment.R;
 
 public class FragmentHandler {
 

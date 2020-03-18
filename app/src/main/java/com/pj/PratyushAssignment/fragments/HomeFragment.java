@@ -1,4 +1,4 @@
-package com.neuman.PratyushAssignment.fragments;
+package com.pj.PratyushAssignment.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -25,10 +25,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.neuman.PratyushAssignment.ItemClass;
-import com.neuman.PratyushAssignment.R;
-import com.neuman.PratyushAssignment.itemAdapter;
-import com.neuman.PratyushAssignment.utils.Globals;
+import com.pj.PratyushAssignment.ItemClass;
+import com.pj.PratyushAssignment.R;
+import com.pj.PratyushAssignment.itemAdapter;
+import com.pj.PratyushAssignment.utils.Globals;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
     private Spinner droplist;
     private String [] items = {"price", "rank", "date", "status"};
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter madapter;
+    private itemAdapter madapter = new itemAdapter() ;
     private RecyclerView.LayoutManager layoutManager;
     int choice;
     ArrayList<ItemClass> data = new ArrayList<>();
@@ -60,8 +60,6 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
         arrayList = getItemClass();
         madapter = new itemAdapter(arrayList);
         recyclerView.setLayoutManager(layoutManager);
-
-
         recyclerView.setAdapter(madapter);
 
 
@@ -145,7 +143,6 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
         madapter = new itemAdapter(data);
         recyclerView.setLayoutManager(layoutManager);
 
-
         recyclerView.setAdapter(madapter);
     }
 
@@ -153,7 +150,6 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
         Collections.sort(data, (itemClass, t1) -> itemClass.getDate().compareTo(t1.getDate()));
         madapter = new itemAdapter(data);
         recyclerView.setLayoutManager(layoutManager);
-
 
         recyclerView.setAdapter(madapter);
     }
@@ -163,25 +159,24 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
         madapter = new itemAdapter(data);
         recyclerView.setLayoutManager(layoutManager);
 
-
         recyclerView.setAdapter(madapter);
     }
 
     private ArrayList<ItemClass> getItemClass(){
 
 
-        data.add(new ItemClass("A","28","4","12-12-2020","not working"));
-        data.add(new ItemClass("b","08","4","15-08-2020","not working"));
-        data.add(new ItemClass("c","08","4","17-08-1920","working"));
-        data.add(new ItemClass("d","87","4","22-10-2020","working"));
-        data.add(new ItemClass("e","04","4","06-08-2020","not working"));
-        data.add(new ItemClass("f","88","4","14-09-2020","working"));
-        data.add(new ItemClass("g","18","4","02-08-2020","not working"));
-        data.add(new ItemClass("h","20","4","06-08-2020","working"));
-        data.add(new ItemClass("i","77","4","06-09-2020","not working"));
-        data.add(new ItemClass("j","06","4","08-10-2020","working"));
-        data.add(new ItemClass("k","09","4","23-08-2020","working"));
-        data.add(new ItemClass("l","34","4","12-08-2020","not working"));
+        data.add(new ItemClass("abaett","28","4","12-12-2020","not working"));
+        data.add(new ItemClass("ball","08","4","15-08-2020","not working"));
+        data.add(new ItemClass("calm","08","4","17-08-1920","working"));
+        data.add(new ItemClass("abe","87","4","22-10-2020","working"));
+        data.add(new ItemClass("cat","04","4","06-08-2020","not working"));
+        data.add(new ItemClass("file","88","4","14-09-2020","working"));
+        data.add(new ItemClass("fite","18","4","02-08-2020","not working"));
+        data.add(new ItemClass("kit","20","4","06-08-2020","working"));
+        data.add(new ItemClass("kite","77","4","06-09-2020","not working"));
+        data.add(new ItemClass("load","06","4","08-10-2020","working"));
+        data.add(new ItemClass("lan","09","4","23-08-2020","working"));
+        data.add(new ItemClass("lap","34","4","12-08-2020","not working"));
 
 
        // Collections.sort(data, (itemClass, t1) -> (itemClass.getName()).compareTo(t1.getName()));
@@ -197,10 +192,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
         inflater.inflate(R.menu.menu_search_setting, menu);
 
         SearchView searchView = (SearchView)menu.findItem(R.id.action_search).getActionView();
-/*
-        Button datebtn = (Button)menu.findItem(R.id.filterByDate).getActionView();
-        Button pricebtn = (Button)menu.findItem(R.id.filterByPrice).getActionView();
-        Button statusbtn = (Button)menu.findItem(R.id.filterByStatus).getActionView();*/
+
         super.onCreateOptionsMenu(menu, inflater);
 
 
@@ -213,7 +205,14 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
 
             @Override
             public boolean onQueryTextChange(String s) {
-                return true;
+
+/*                arrayList = getItemClass();
+                itemAdapter madapter = new itemAdapter(arrayList);
+                madapter.getFilter().filter(s);*/
+                madapter.getFilter().filter(s);
+
+
+                return false;
             }
         });
     }
@@ -232,6 +231,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickDate() );
+            fr.addToBackStack(null);
             fr.commit();
             return false;
         }
@@ -242,6 +242,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickRange() );
+            fr.addToBackStack(null);
             fr.commit();
             return false;
         }
@@ -252,6 +253,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickStatus() );
+            fr.addToBackStack(null);
             fr.commit();
             return false;
         }

@@ -1,4 +1,4 @@
-package com.neuman.PratyushAssignment;
+package com.pj.PratyushAssignment;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.neuman.brutus", appContext.getPackageName());
+        assertEquals("com.pj.PratyushAssignment", appContext.getPackageName());
     }
 }

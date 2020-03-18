@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.neuman.PratyushAssignment"
+        applicationId "com.pj.PratyushAssignment"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 240

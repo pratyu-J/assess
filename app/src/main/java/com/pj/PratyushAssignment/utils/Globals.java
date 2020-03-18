@@ -1,4 +1,4 @@
-package com.neuman.PratyushAssignment.utils;
+package com.pj.PratyushAssignment.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -8,13 +8,13 @@ import androidx.fragment.app.FragmentManager;
 
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.DoubleBounce;
-import com.neuman.PratyushAssignment.R;
-import com.neuman.PratyushAssignment.fragments.AssetFragment;
-import com.neuman.PratyushAssignment.fragments.HomeFragment;
-import com.neuman.PratyushAssignment.fragments.MoreFragment;
-import com.neuman.PratyushAssignment.fragments.OrgFragment;
-import com.neuman.PratyushAssignment.fragments.SupplyFragment;
-import com.neuman.PratyushAssignment.fragments.TicketFragment;
+import com.pj.PratyushAssignment.R;
+import com.pj.PratyushAssignment.fragments.AssetFragment;
+import com.pj.PratyushAssignment.fragments.HomeFragment;
+import com.pj.PratyushAssignment.fragments.MoreFragment;
+import com.pj.PratyushAssignment.fragments.OrgFragment;
+import com.pj.PratyushAssignment.fragments.SupplyFragment;
+import com.pj.PratyushAssignment.fragments.TicketFragment;
 
 import java.util.HashMap;
 import java.util.Map;

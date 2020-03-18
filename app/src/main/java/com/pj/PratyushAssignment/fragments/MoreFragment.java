@@ -1,4 +1,4 @@
-package com.neuman.PratyushAssignment.fragments;
+package com.pj.PratyushAssignment.fragments;
 
 import androidx.fragment.app.Fragment;
 

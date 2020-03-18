@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.neuman.PratyushAssignment">
+    package="com.pj.PratyushAssignment">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -18,7 +18,8 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.neuman.PratyushAssignment.Home">
+        <activity android:name="com.pj.PratyushAssignment.Home"
+            android:parentActivityName=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.neuman.PratyushAssignment.fileprovider"
+            android:authorities="com.pj.PratyushAssignment.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

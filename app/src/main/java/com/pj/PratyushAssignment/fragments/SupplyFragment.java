@@ -1,4 +1,4 @@
-package com.neuman.PratyushAssignment.fragments;
+package com.pj.PratyushAssignment.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,14 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.neuman.PratyushAssignment.R;
+import com.pj.PratyushAssignment.R;
 
-public class AssetFragment extends Fragment {
+public class SupplyFragment extends Fragment {
 
+    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view_ = inflater.inflate(R.layout.fragment_assets, container, false);
-        return view_;
+        View view = inflater.inflate(R.layout.fragment_supplies, container, false);
+        return view;
     }
 }
