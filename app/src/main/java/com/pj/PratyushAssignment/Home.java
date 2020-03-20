@@ -67,6 +67,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
     public void onBackPressed() {
         if(fragmentHandler.prev != null) {
             fragmentHandler.transition(fragmentHandler.prev, null);
+            super.onBackPressed();
         }
     }
 }

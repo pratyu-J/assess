@@ -206,9 +206,6 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
             @Override
             public boolean onQueryTextChange(String s) {
 
-/*                arrayList = getItemClass();
-                itemAdapter madapter = new itemAdapter(arrayList);
-                madapter.getFilter().filter(s);*/
                 madapter.getFilter().filter(s);
 
 
@@ -227,7 +224,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
 
         if(id==R.id.filterByDate){
 
-            Toast.makeText(getActivity(), "u screwed", Toast.LENGTH_SHORT).show();
+
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickDate() );
@@ -238,7 +235,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
 
         if(id==R.id.filterByPrice){
 
-            Toast.makeText(getActivity(), "u screwed", Toast.LENGTH_SHORT).show();
+
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickRange() );
@@ -249,7 +246,7 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
 
         if(id==R.id.filterByStatus){
 
-            Toast.makeText(getActivity(), "u screwed", Toast.LENGTH_SHORT).show();
+
             FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickStatus() );
