@@ -27,6 +27,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.pj.PratyushAssignment.ItemClass;
 import com.pj.PratyushAssignment.R;
+import com.pj.PratyushAssignment.dialogDate;
+import com.pj.PratyushAssignment.dialogRange;
+import com.pj.PratyushAssignment.dialogStatus;
 import com.pj.PratyushAssignment.itemAdapter;
 import com.pj.PratyushAssignment.utils.Globals;
 
@@ -224,38 +227,50 @@ public class HomeFragment extends Fragment implements SearchView.OnQueryTextList
 
         if(id==R.id.filterByDate){
 
-
-            FragmentTransaction fr = getChildFragmentManager().beginTransaction();
-
-            fr.replace(R.id.dateContainer, new PickDate() );
-            fr.addToBackStack(null);
-            fr.commit();
+            DateDialog();
             return false;
         }
 
         if(id==R.id.filterByPrice){
 
 
-            FragmentTransaction fr = getChildFragmentManager().beginTransaction();
+            rangeDialog();
 
-            fr.replace(R.id.dateContainer, new PickRange() );
-            fr.addToBackStack(null);
-            fr.commit();
             return false;
         }
 
         if(id==R.id.filterByStatus){
 
 
-            FragmentTransaction fr = getChildFragmentManager().beginTransaction();
+            statusDialog();
+            /*FragmentTransaction fr = getChildFragmentManager().beginTransaction();
 
             fr.replace(R.id.dateContainer, new PickStatus() );
             fr.addToBackStack(null);
-            fr.commit();
+            fr.commit();*/
             return false;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void rangeDialog() {
+        dialogRange drange = new dialogRange();
+        drange.show(((AppCompatActivity)getActivity()).getSupportFragmentManager(), "range dialog");
+
+    }
+
+    private void statusDialog() {
+        dialogStatus dstatus = new dialogStatus();
+        dstatus.show(((AppCompatActivity)getActivity()).getSupportFragmentManager(), "status dialog");
+    }
+
+    private void DateDialog() {
+        dialogDate ddate = new dialogDate();
+        ddate.show(((AppCompatActivity)getActivity()).getSupportFragmentManager(), "date dialog");
+
+    }
+
+
 
     @Override
     public void onStart() {

@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pj.PratyushAssignment.fragments.PickStatus">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/statusCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Working"
+                android:id="@+id/working"
+                android:layout_margin="5dp"
+                android:checked="true"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Not Working"
+                android:id="@+id/not_working"
+                android:layout_margin="5dp"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/repair"
+                android:text="Being Repaired"
+                android:layout_margin="5dp"
+                />
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+</FrameLayout>

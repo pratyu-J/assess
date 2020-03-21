@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Start date"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:padding="8dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/enddate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="End date"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/startdate"
+        />
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/startdate"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-87dp"
+        android:padding="8dp"
+        android:text="FILTER" />-->
+
+
+</RelativeLayout>
